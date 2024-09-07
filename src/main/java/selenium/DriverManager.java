@@ -1,6 +1,5 @@
 package selenium;
 
-import org.apache.poi.hssf.usermodel.HSSFDataBarFormatting;
 import org.openqa.selenium.WebDriver;
 
 public abstract class DriverManager {
