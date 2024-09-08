@@ -19,7 +19,7 @@ public class BaseTest {
     }
 
     public void ipon(String env) throws Exception {
-        switch (env.toUpperCase()){
+        switch (env.toUpperCase()) {
             case "QA": {
                 driver.get("https://www.booking.com/");
             }
@@ -37,7 +37,7 @@ public class BaseTest {
         }
     }
 
-    public void quit(){
+    public void quit() {
         driverManager.quitWebDriver();
     }
 }
