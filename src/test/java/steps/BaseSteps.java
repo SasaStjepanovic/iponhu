@@ -8,6 +8,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.testng.Reporter;
 import pages.BasePage;
+import pages.Components.FooterComponent;
 import pages.LoginLogoutPage;
 import tests.BaseTest;
 
@@ -29,7 +30,7 @@ public class BaseSteps extends BaseTest {
 
     @After
     public void tearDown() {
-//        quit();
+        quit();
     }
 
     @Given("a user reads test data from {string} {string} by id {string}")
@@ -49,13 +50,26 @@ public class BaseSteps extends BaseTest {
 
     @And("user enters username and password for login action")
     public void userEntersUsernameAndPasswordForLoginAction() {
-        new LoginLogoutPage(driver).login(data.get("username"), data.get("password"));
+        new LoginLogoutPage(driver).login(data.get("username"), data.get("email"),data.get("password"), data.get("emailYesNo"));
     }
 
-    @Then("user sholud verify login action")
-    public void userSholudVerifyLoginAction() {
+    @Then("user should verify login action")
+    public void userShouldVerifyLoginAction() {
         new BasePage(driver).checkUrlPage(data.get("url"));
     }
 
+    @And("user chooses language")
+    public void userChoosesLanguage() {
+        new FooterComponent(driver).selectLanguage(data.get("languageNumber"));
+    }
 
+    @And("user enters email and password for login action")
+    public void userEntersEmailAndPasswordForLoginAction() {
+        new LoginLogoutPage(driver).login(data.get("username"), data.get("email"),data.get("password"), data.get("emailYesNo"));
+    }
+
+    @Then("user should verify invalid login action")
+    public void userShouldVerifyInvalidLoginAction() {
+        new LoginLogoutPage(driver).checkMessage(data.get("invalidMessage"));
+    }
 }

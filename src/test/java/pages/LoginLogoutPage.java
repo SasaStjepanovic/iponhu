@@ -23,11 +23,15 @@ public class LoginLogoutPage extends BasePage {
     @FindBy(xpath = "//button[@type='submit']")
     WebElement logInButton;
 
+    @FindBy(xpath = "//div[@class='mt-1 text-red-700 text-xs']")
+    WebElement invalidMessage;
+
+
     public void pressLoginButton() {
         clickElement(logInButtonHeader, "Login button is pressed");
     }
 
-    public void enterUserName(String user) {
+    public void enterUserNameOrEmail(String user) {
         typeText(username, user, "Username is entered");
     }
 
@@ -39,9 +43,19 @@ public class LoginLogoutPage extends BasePage {
         clickElement(logInButton, "Login button is pressed");
     }
 
-    public void login(String user, String passw) {
-        enterUserName(user);
-        enterPassword(passw);
-        logInButton();
+    public void login(String user, String email, String password, String yesOrNoEmail) {
+        if (yesOrNoEmail.equalsIgnoreCase("No")) {
+            enterUserNameOrEmail(user);
+            enterPassword(password);
+            logInButton();
+        } else {
+            enterUserNameOrEmail(email);
+            enterPassword(password);
+            logInButton();
+        }
+    }
+
+    public void checkMessage (String expectedMessage){
+        compareText(invalidMessage, expectedMessage);
     }
 }

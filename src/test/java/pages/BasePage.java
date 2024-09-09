@@ -54,12 +54,11 @@ public class BasePage {
         Assert.assertTrue(actualUrl.contains(expextedUrl), actualUrl);
     }
 
-    public void checkUrlPage(String url) {
-        String expextedUrl = "https://ipon.hu/" + url;
+    public void checkUrlPage(String expectedUrl) {
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         String actualUrl = driver.getCurrentUrl();
         System.out.println("Current url address: " + actualUrl);
-        Assert.assertTrue(actualUrl.contains(expextedUrl), actualUrl);
+        Assert.assertTrue(actualUrl.contains(expectedUrl), actualUrl);
     }
 
     public void typeText(WebElement element, String text, String log) {
@@ -79,5 +78,12 @@ public class BasePage {
             element.sendKeys(text);
             System.out.println("Entered text: " + text + " :to element: " + log);
         }
+    }
+
+    public void compareText(WebElement element, String expectedText) {
+        explicitWait(element);
+        String actualText = element.getText();
+        System.out.println("Actual text is: " + actualText);
+        Assert.assertEquals(actualText, expectedText);
     }
 }
