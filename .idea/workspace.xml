@@ -7,11 +7,9 @@
     <list default="true" id="586ca665-c764-4172-a6d2-bfd88930b956" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/features/1_Login.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/features/1_Login.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pages/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/BasePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/pages/Components/FooterComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/Components/FooterComponent.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/pages/LoginLogoutPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/LoginLogoutPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/steps/BaseSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/steps/BaseSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/test_data/ipon.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/test_data/ipon.xlsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -83,3 +83,17 @@ Feature: Login scenarios include valid login and invalid login with combination 
     Examples:
       | TC_ID  |
       | IP_006 |
+
+  @ipon
+  Scenario Outline: Login valid username (footer)
+
+    Given a user reads test data from "ipon" "general" by id "<TC_ID>"
+    Given the user is on the ipon page
+    And user chooses language
+    And user clicks login footer button
+    And user enters username and password for login action
+    Then user should verify login action
+
+    Examples:
+      | TC_ID  |
+      | IP_001 |

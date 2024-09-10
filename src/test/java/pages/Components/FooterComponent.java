@@ -33,6 +33,13 @@ public class FooterComponent extends BasePage {
     @FindBy(xpath = "//div[@class='relative']//ul/../..")
     WebElement languagesField;
 
+    @FindBy(xpath = "//footer//div[3]//ul//li")
+    WebElement logInFooter;
+
+    public void pressLoginFooter(){
+        clickElement(logInFooter, "Lgoin button is pressd through the footer");
+    }
+
     public void selectLanguage(String rowLanguage){
 
         int rowNumber = Integer.parseInt(rowLanguage);

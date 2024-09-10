@@ -72,4 +72,10 @@ public class BaseSteps extends BaseTest {
     public void userShouldVerifyInvalidLoginAction() {
         new LoginLogoutPage(driver).checkMessage(data.get("invalidMessage"));
     }
+
+    @And("user clicks login footer button")
+    public void userClicksLoginFooterButton() {
+        LoginLogoutPage lp = new LoginLogoutPage(driver);
+        lp.logInFooterButton();
+    }
 }
