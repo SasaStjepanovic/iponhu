@@ -30,14 +30,22 @@ public class FooterComponent extends BasePage {
     @FindBy(xpath = "//i[@class='fab fa-discord']")
     WebElement discord;
 
-    @FindBy(xpath = "//div[@class='relative']//ul/../..")
+    @FindBy(xpath = "//footer//div[@class='relative']//ul/../..")
     WebElement languagesField;
 
     @FindBy(xpath = "//footer//div[3]//ul//li")
     WebElement logInFooter;
 
+//    @FindBy(css = "div[x-show='isOpen']>ul>li:nth-child(3)>a>span")
+    @FindBy(xpath = "//div[@class='relative']//ul//li[3]//a//span")
+    WebElement language2;
+
     public void pressLoginFooter(){
         clickElement(logInFooter, "Lgoin button is pressd through the footer");
+    }
+
+    public void expandLanguagesBar(){
+        clickElement(languagesField, "Languages drop down menu is expanded");
     }
 
     public void selectLanguage(String rowLanguage){
@@ -55,16 +63,22 @@ public class FooterComponent extends BasePage {
         System.out.println("Selected language is: " + selectedLanguage);
     }
 
-    public void checkItems(String[] menuItems) throws InterruptedException {
+    public void verifyAllLanguages() throws InterruptedException {
 
-        List<WebElement> menu = driver.findElements(By.cssSelector(".bm-item-list>a"));
-        Thread.sleep(1000);
+//        List<WebElement> menu = driver.findElements(By.cssSelector("//div[@class='relative']//ul//li//a//span"));
+        List<WebElement> menu = driver.findElements(By.xpath("//div[@class='relative']//ul//li//span"));
+        String[] menuItems = {"Magyarország (magyar)", "Magyarország (angol)", "Horvátország (horvát)", "Románia (román)", "Németország (német)", "Ausztria (német)", "Szlovénia (szlovén)"};
+
         for (int i = 0; i < menu.size(); i++) {
             String item = menu.get(i).getText();
             Assert.assertEquals(item, menuItems[i], "Menu item not displayed");
             System.out.println("Menu item: " +item+ " is displayed");
             Assert.assertTrue(menu.get(i).isDisplayed(), menuItems[i]);
-
         }
+    }
+
+    public void checkLanguages (String expectedMessage){
+        compareText(language2, expectedMessage);
+
     }
 }

@@ -1,5 +1,6 @@
 package steps;
 
+import com.fasterxml.jackson.databind.ser.Serializers;
 import excel.ExcelSupport;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
@@ -30,7 +31,7 @@ public class BaseSteps extends BaseTest {
 
     @After
     public void tearDown() {
-        quit();
+//        quit();
     }
 
     @Given("a user reads test data from {string} {string} by id {string}")
@@ -77,5 +78,20 @@ public class BaseSteps extends BaseTest {
     public void userClicksLoginFooterButton() {
         LoginLogoutPage lp = new LoginLogoutPage(driver);
         lp.logInFooterButton();
+    }
+
+    @And("check languages")
+    public void checkLanguages() {
+        new FooterComponent(driver).checkLanguages(data.get("invalidMessage"));
+    }
+
+    @And("user expand languages bar")
+    public void userExpandLanguagesBar() {
+        new FooterComponent(driver).expandLanguagesBar();
+    }
+
+    @Then("user should verify existing of all languages")
+    public void userShouldVerifyExistingOfAllLanguages() throws InterruptedException {
+        new FooterComponent(driver).verifyAllLanguages();
     }
 }

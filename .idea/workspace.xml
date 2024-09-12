@@ -8,8 +8,8 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/features/1_Login.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/features/1_Login.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/pages/Components/FooterComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/Components/FooterComponent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pages/LoginLogoutPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/LoginLogoutPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/steps/BaseSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/steps/BaseSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/test_data/ipon.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/test_data/ipon.xlsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,7 +56,7 @@
     "TestNG.C:/Users/Lenovo/Desktop/QAprojekti/Automation_projekti/iponhu/xmls/iponTestNGCcumber.xml.executor": "Run",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Lenovo/Desktop/QAprojekti/Automation_projekti/iponhu",
+    "last_opened_file_path": "C:/Users/Lenovo/Desktop/QAprojekti/Automation_projekti/iponhu/src/test/java/features",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0"
@@ -64,6 +64,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Lenovo\Desktop\QAprojekti\Automation_projekti\iponhu\src\test\java\features" />
       <recent name="C:\Users\Lenovo\Desktop\QAprojekti\Automation_projekti\iponhu" />
       <recent name="C:\Users\Lenovo\Desktop\QAprojekti\Automation_projekti\iponhu\src\test\test_data" />
     </key>
