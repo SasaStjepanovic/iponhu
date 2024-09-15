@@ -6,8 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="586ca665-c764-4172-a6d2-bfd88930b956" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/features/0_Footer.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/features/0_Footer.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/features/1_Login.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/features/1_Login.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/BasePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/pages/Components/FooterComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/Components/FooterComponent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/LoginLogoutPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/LoginLogoutPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/runners/Runner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/runners/Runner.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/steps/BaseSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/steps/BaseSteps.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/test_data/ipon.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/test_data/ipon.xlsx" afterDir="false" />
     </list>
@@ -26,21 +30,21 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "SasaStjepanovic"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;SasaStjepanovic&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/SasaStjepanovic/iponhu.git",
-    "accountId": "47df72ab-e9ff-4438-a52b-8eafcd870114"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/SasaStjepanovic/iponhu.git&quot;,
+    &quot;accountId&quot;: &quot;47df72ab-e9ff-4438-a52b-8eafcd870114&quot;
   }
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 0
-}]]></component>
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
   <component name="ProjectId" id="2li6sTJUnXY3vwOdFrsTAaOgldT" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -56,7 +60,7 @@
     "TestNG.C:/Users/Lenovo/Desktop/QAprojekti/Automation_projekti/iponhu/xmls/iponTestNGCcumber.xml.executor": "Run",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Lenovo/Desktop/QAprojekti/Automation_projekti/iponhu/src/test/java/features",
+    "last_opened_file_path": "C:/Users/Lenovo/Desktop/QAprojekti/Automation_projekti/Vezba_Automatizacija_XI",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0"
@@ -67,6 +71,9 @@
       <recent name="C:\Users\Lenovo\Desktop\QAprojekti\Automation_projekti\iponhu\src\test\java\features" />
       <recent name="C:\Users\Lenovo\Desktop\QAprojekti\Automation_projekti\iponhu" />
       <recent name="C:\Users\Lenovo\Desktop\QAprojekti\Automation_projekti\iponhu\src\test\test_data" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="pages" />
     </key>
   </component>
   <component name="RunManager">
