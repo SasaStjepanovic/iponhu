@@ -32,6 +32,10 @@ public class BasePage {
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true)", element);
     }
 
+    public void scrollTopOfWindow(){
+        ((JavascriptExecutor) driver).executeScript("window.scrollTo(0, 0);");
+    }
+
     public void clickSpecificCoordinate(){
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("document.elementFromPoint(100, 200).click();");
@@ -83,7 +87,9 @@ public class BasePage {
             scrollToElement(element);
             new Actions(driver).moveToElement(element).perform();
             if (!element.isSelected()) {
+                System.out.println("Check box was not selected");
                 element.click();
+                System.out.println("Check box is selected");
             } else {
                 element.isSelected();
                 System.out.println("Check box is already selected");
@@ -162,5 +168,8 @@ public class BasePage {
         Assert.assertEquals(actualText, expectedText);
     }
 
+    public String getElementText(WebElement element){
 
+        return element.getText();
+    }
 }

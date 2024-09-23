@@ -7,11 +7,10 @@ import io.cucumber.java.Before;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
+import org.testng.Assert;
 import org.testng.Reporter;
-import pages.BasePage;
+import pages.*;
 import pages.Components.FooterComponent;
-import pages.LoginLogoutPage;
-import pages.RegistrationPage;
 import tests.BaseTest;
 
 import java.util.Map;
@@ -46,7 +45,7 @@ public class BaseSteps extends BaseTest {
 
     @After
     public void tearDown() {
-        quit();
+//        quit();
     }
 
     @Given("a user reads test data from {string} {string} by id {string}")
@@ -55,7 +54,7 @@ public class BaseSteps extends BaseTest {
     }
 
     @And("user clicks login button")
-    public void userClicksLoginButton() {
+    public void userClicksLoginButton() throws InterruptedException {
         new LoginLogoutPage(driver).pressLoginButton();
     }
 
@@ -111,7 +110,7 @@ public class BaseSteps extends BaseTest {
     }
 
     @And("user clicks logout button")
-    public void userClicksLogoutButton() {
+    public void userClicksLogoutButton() throws InterruptedException {
         new LoginLogoutPage(driver).logoutButton();
     }
 
@@ -126,7 +125,7 @@ public class BaseSteps extends BaseTest {
     }
 
     @And("user enters username and password and check remember option for login action")
-    public void userEntersUsernameAndPasswordAndCheckRememberOptionForLoginAction() {
+    public void userEntersUsernameAndPasswordAndCheckRememberOptionForLoginAction() throws InterruptedException {
         new LoginLogoutPage(driver).loginButtonRememberMe(data.get("username"), data.get("email"), data.get("password"), data.get("emailYesNo"));
     }
 
@@ -199,5 +198,150 @@ public class BaseSteps extends BaseTest {
     @And("user closes popup window")
     public void userClosesPopupWindow() {
         new RegistrationPage(driver).closePopupWindow();
+    }
+
+    @Then("user should verify that the password field is filled as invalid")
+    public void userShouldVerifyThatThePasswordFieldIsFilledAsInvalid() {
+        new RegistrationPage(driver).verifyErrorMessagePassword(data.get("errorMesssageEmailNotValid"));
+    }
+
+    @Then("user should verify that the username field is filled as invalid")
+    public void userShouldVerifyThatTheUsernameFieldIsFilledAsInvalid() {
+        new RegistrationPage(driver).verifyErrorMessageUserName(data.get("errorMesssageEmailNotValid"));
+    }
+
+    @And("user clicks Myprofile button")
+    public void userClicksMyprofileButton() throws InterruptedException {
+        new LoginLogoutPage(driver).expandMyProfile();
+    }
+
+    @Then("user should verify all myprofile items")
+    public void userShouldVerifyAllMyprofileItems() throws InterruptedException {
+        new GeneralPage(driver).verifyAllItemsMyProfile();
+    }
+
+    @And("user clicks Order item")
+    public void userClicksOrderItem() throws InterruptedException {
+        new GeneralPage(driver).clickOrders();
+    }
+
+    @Then("user should verify visibility of item")
+    public void userShouldVerifyVisibilityOfItem() {
+        new GeneralPage(driver).verifyOrders(data.get("myProfileItem1"));
+    }
+
+    @And("user want to get name favourites")
+    public String userWantToGetNameFavourites() {
+        return new GeneralPage(driver).getNameFavouritesItem();
+    }
+
+    @Then("user should verify visibility of item Favourites")
+    public void userShouldVerifyVisibilityOfItemFavourites() {
+        Assert.assertEquals(new GeneralPage(driver).getNameFavouritesItem(),data.get("myProfileItem2"));
+    }
+
+    @And("user clicks Favourites item")
+    public void userClicksFavouritesItem() throws InterruptedException {
+        new GeneralPage(driver).clickFavourites();
+    }
+
+    @And("user clicks Monitored item")
+    public void userClicksMonitoredItem() throws InterruptedException {
+        new GeneralPage(driver).clickMonitoredItems();
+    }
+
+    @And("user want to get name monitored item")
+    public String userWantToGetNameMonitoredItem() {
+        return new GeneralPage(driver).getNameMonitoredItem();
+    }
+
+    @Then("user should verify visibility of Monitored item")
+    public void userShouldVerifyVisibilityOfMonitoredItem() {
+        Assert.assertEquals(new GeneralPage(driver).getNameMonitoredItem(),data.get("myProfileItem3"));
+    }
+
+    @And("user clicks Partner Program item")
+    public void userClicksPartnerProgramItem() throws InterruptedException {
+        new GeneralPage(driver).clickPartnerProgramItems();
+    }
+
+    @And("user want to get name partner program item")
+    public void userWantToGetNamePartnerProgramItem() {
+
+    }
+
+    @Then("user should verify visibility of Partner program item")
+    public void userShouldVerifyVisibilityOfPartnerProgramItem() {
+        Assert.assertEquals(new GeneralPage(driver).getNamePartnerProgram(),data.get("myProfileItem4"));
+    }
+
+    @And("user clicks Personal Information item")
+    public void userClicksPersonalInformationItem() throws InterruptedException {
+        new GeneralPage(driver).clickPersonalInformationItems();
+    }
+
+    @And("user want to get name personal information item")
+    public String userWantToGetNamePersonalInformationItem() {
+        return new GeneralPage(driver).getNamePersonalInformation();
+    }
+
+    @Then("user should verify visibility of Personal information item")
+    public void userShouldVerifyVisibilityOfPersonalInformationItem() {
+        Assert.assertEquals(new GeneralPage(driver).getNamePersonalInformation(),data.get("myProfileItem5"));
+    }
+
+    @And("user clicks Settings item")
+    public void userClicksSettingsItem() throws InterruptedException {
+        new GeneralPage(driver).clickSettingsItems();
+    }
+
+    @And("user want to get name settings item")
+    public String userWantToGetNameSettingsItem() {
+        return new GeneralPage(driver).getNameSettings();
+    }
+
+    @Then("user should verify visibility of Settings item")
+    public void userShouldVerifyVisibilityOfSettingsItem() {
+        Assert.assertEquals(new GeneralPage(driver).getNameSettings(), data.get("myProfileItem6"));
+    }
+
+    @And("user choose category")
+    public void userChooseCategory() throws InterruptedException {
+        new GeneralPage(driver).selectCategory1_6(data.get("category"));
+    }
+
+    @And("user choose notebook as a product")
+    public void userChooseNotebookAsAProduct() throws InterruptedException {
+        new NotebookPCPage(driver).selectNoteBookProduct(data.get("notebook"));
+    }
+
+    @And("user want to get name of Notebook category")
+    public String userWantToGetNameOfNotebookCategory() {
+        return new NotebookPCPage(driver).getNameCategoryNotebook();
+    }
+
+    @Then("user should verify visibility of Notebook category")
+    public void userShouldVerifyVisibilityOfNotebookCategory() {
+        Assert.assertEquals(new NotebookPCPage(driver).getNameCategoryNotebook(), data.get("category"));
+    }
+
+    @And("user filters appropriate notebook")
+    public void userFiltersAppropriateNotebook() throws InterruptedException {
+        new NotebookPCPage(driver).filter1(data.get("typeFilterNotebook"), data.get("minPrice"), data.get("maxPrice"), data.get("pickup"), data.get("warrantyMin"), data.get("warrantyMax"));
+    }
+
+    @Then("user should verify visibility Notebook product")
+    public void userShouldVerifyVisibilityNotebookProduct() {
+        Assert.assertEquals(new NotebookPCPage(driver).getNameNotebookProduct(), data.get("notebook"));
+    }
+
+    @Then("user should verify invisibility of filtered product")
+    public void userShouldVerifyInvisibilityOfFilteredProduct() {
+        Assert.assertEquals(new NotebookPCPage(driver).getUnsuccessfulFilterAction(), data.get("noFilteredAction"));
+    }
+
+    @And("user selects one item")
+    public void userSelectsOneItem() {
+        new NotebookPCPage(driver).clickFistItem();
     }
 }

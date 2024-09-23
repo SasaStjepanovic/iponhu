@@ -53,7 +53,7 @@ public class LoginLogoutPage extends BasePage {
         clickElement(forgottenPassord, "Forgotten password button is pressed");
     }
 
-    public void pressLoginButton() {
+    public void pressLoginButton() throws InterruptedException {
         clickElement(logInButtonHeader, "Login button is pressed");
     }
 
@@ -85,8 +85,13 @@ public class LoginLogoutPage extends BasePage {
         }
     }
 
-    public void logoutButton() {
+    public void expandMyProfile() throws InterruptedException {
         clickElement(expandProfile, "My profile is expanded");
+        Thread.sleep(3000);
+    }
+
+    public void logoutButton() throws InterruptedException {
+        expandMyProfile();
         clickElementJS(logOutButton, "logOut button is pressed");
     }
 
@@ -106,7 +111,7 @@ public class LoginLogoutPage extends BasePage {
         checkCheckbox(rememberMe, "Remember check box is checked");
     }
 
-    public void loginButtonRememberMe(String user, String email, String password, String yesOrNoEmail) {
+    public void loginButtonRememberMe(String user, String email, String password, String yesOrNoEmail) throws InterruptedException {
         if (yesOrNoEmail.equalsIgnoreCase("No")) {
             enterUserNameOrEmail(user);
             enterPassword(password);

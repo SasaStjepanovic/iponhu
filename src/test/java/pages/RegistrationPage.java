@@ -174,7 +174,7 @@ public class RegistrationPage extends BasePage {
     }
 
     public void verifyErrorMessagePassword(String errorMessagePassword) {
-        compareText(emailErrorMessage, errorMessagePassword);
+        compareText(passwordErrorMessage, errorMessagePassword);
     }
 
     public void verifyErrorMessageUserName(String errorMessageUserName) {
@@ -188,6 +188,7 @@ public class RegistrationPage extends BasePage {
     }
 
     public void closePopupWindow(){
+        clickSpecificCoordinate();
         WebElement element = driver.findElement(By.cssSelector("#rc-imageselect"));
         explicitWait(element);
         if(element.isDisplayed()){
