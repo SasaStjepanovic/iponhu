@@ -83,7 +83,7 @@ Feature: Notebook product: Apply filter for all Notebook PC eBook's
       | TC_ID  |
       | IP_002 |
 
-  @iponx
+  @ipon
   Scenario Outline: There are no filtered products
 
     Given a user reads test data from "ipon" "notebook" by id "<TC_ID>"

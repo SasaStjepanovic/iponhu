@@ -6,11 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="586ca665-c764-4172-a6d2-bfd88930b956" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/features/2_Registraton.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/features/2_Registraton.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/features/3_Notebook.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/features/3_Notebook.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/pages/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/BasePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pages/LoginLogoutPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/LoginLogoutPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pages/RegistrationPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/RegistrationPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/runners/Runner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/runners/Runner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/NotebookPCPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/NotebookPCPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/steps/BaseSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/steps/BaseSteps.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/test_data/ipon.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/test_data/ipon.xlsx" afterDir="false" />
     </list>

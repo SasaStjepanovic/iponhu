@@ -112,6 +112,8 @@ public class NotebookPCPage extends BasePage {
     public void clickFistItem(){
         clickElement(firstItemFromFilteredList, "First item is selected");
     }
+
+
 }
 
 

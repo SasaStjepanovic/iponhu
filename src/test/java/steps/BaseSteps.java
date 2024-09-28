@@ -45,7 +45,7 @@ public class BaseSteps extends BaseTest {
 
     @After
     public void tearDown() {
-//        quit();
+        quit();
     }
 
     @Given("a user reads test data from {string} {string} by id {string}")
@@ -343,5 +343,76 @@ public class BaseSteps extends BaseTest {
     @And("user selects one item")
     public void userSelectsOneItem() {
         new NotebookPCPage(driver).clickFistItem();
+    }
+
+    @Then("user verify empty shopping basket")
+    public void userVerifyEmptyShoppingBasket() {
+        ShoppingPage sp = new ShoppingPage(driver);
+        Assert.assertEquals(sp.getNameEmptyCart(), data.get("emptyBasket"));
+    }
+
+    @And("user clicks continue shopping")
+    public void userClicksContinueShopping() {
+        new ShoppingPage(driver).clickContinueButton();
+    }
+
+    @And("user adds products quantity number")
+    public void userAddsProductsQuantityNumber() {
+        new ShoppingPage(driver).addQuantity(data.get("quantity"));
+    }
+
+    @And("user delete all products from basket")
+    public void userDeleteAllProductsFromBasket() {
+        new ShoppingPage(driver).deleteAllChartsFromBasket();
+    }
+
+    @And("user clicks shopping basket button")
+    public void userClicksShoppingBasketButton() {
+        new ShoppingPage(driver).clickShoppingBasketButton();
+    }
+
+    @And("user clicks add to cart")
+    public void userClicksAddToCart() {
+        new ShoppingPage(driver).clickAddCart();
+    }
+
+    @Then("user should verify that product is added in the shoopping basket")
+    public void userShouldVerifyThatProductIsAddedInTheShooppingBasket() {
+        Assert.assertEquals(new ShoppingPage(driver).getColorShoppingBasket(data.get("attributeType")), data.get("color"));
+    }
+
+    @And("user closes cart window")
+    public void userClosesCartWindow() {
+        new ShoppingPage(driver).clickCloseCart();
+    }
+
+    @And("user clicks continue to cart button")
+    public void userClicksContinueToCartButton() {
+        new ShoppingPage(driver).clickContinueCheckOut();
+    }
+
+    @And("user delete all products")
+    public void userDeleteAllProducts() {
+        new ShoppingPage(driver).deleteAllproducts();
+    }
+
+    @Then("user should verify the basket is empty")
+    public void userShouldVerifyTheBasketIsEmpty() {
+        new ShoppingPage(driver).verifyTheBasketIsEmpty();
+    }
+
+    @And("user clicks continue to checkout")
+    public void userClicksContinueToCheckout() {
+        new ShoppingPage(driver).clickContinueCheckOut();
+    }
+
+    @And("user clicks order button")
+    public void userClicksOrderButton() {
+        new CheckoutPage(driver).pressOrderButton();
+    }
+
+    @Then("user should verify error message for zip code")
+    public void userShouldVerifyErrorMessageForZipCode() {
+        Assert.assertEquals(new CheckoutPage(driver).getZipCodeMessage(),data.get("zipcodeMessage"));
     }
 }

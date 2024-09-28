@@ -172,4 +172,9 @@ public class BasePage {
 
         return element.getText();
     }
+
+    public String getElementCssValue(WebElement element, String attributeType){
+
+        return element.getCssValue(attributeType);
+    }
 }
