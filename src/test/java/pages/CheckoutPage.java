@@ -27,7 +27,10 @@ public class CheckoutPage extends BasePage {
     WebElement orderButton;
 
     @FindBy(xpath = "(//div[@class='input__error form-group__error'][normalize-space()='This value should not be blank.'])[1]")
-    WebElement zipcodeErrorMessage;
+    WebElement zipcodeErrorMessageBlank;
+
+    @FindBy(xpath = "(//div[normalize-space()='This value is not a valid zip code.'])[1]")
+    WebElement zipcodeErrorMessageBad;
 
     @FindBy(xpath = "(//div[@class='input__error form-group__error'][normalize-space()='This value should not be blank.'])[2]")
     WebElement cityErrorMessage;
@@ -47,8 +50,24 @@ public class CheckoutPage extends BasePage {
     @FindBy(css = "#checkout_base_billingAddress")
     WebElement address;
 
-    public String getZipCodeMessage(){
-        return getElementText(zipcodeErrorMessage);
+    @FindBy(xpath = "//i[@class='fas fa-shopping-cart text-xl md:text-2xl mr-1']")
+    WebElement shoppingCartButton;
+
+    @FindBy(xpath = "(//span[@class='button__text'][normalize-space()='Edit'])[1]")
+    WebElement editButtownOwnData;
+
+    @FindBy(xpath = "(//span[@class='button__text'][normalize-space()='Edit'])[2]")
+    WebElement editButtonPickup;
+
+    @FindBy(xpath = "(//span[@class='button__text'][normalize-space()='Edit'])[3]")
+    WebElement editButtonPayment;
+
+    public String getZipCodeMessageBlank(){
+        return getElementText(zipcodeErrorMessageBlank);
+    }
+
+    public String getZipCodeMessageBad(){
+        return getElementText(zipcodeErrorMessageBad);
     }
 
     public String getCityMessage(){
@@ -61,6 +80,22 @@ public class CheckoutPage extends BasePage {
 
     public void pressOrderButton(){
         clickElementJS(orderButton, "Order button is pressed");
+    }
+
+    public void pressShoppingCartButton(){
+        clickElement(shoppingCartButton, "Shopping cart button is pressed");
+    }
+
+    public void pressEditOwnButton(){
+        clickElement(editButtownOwnData, "Edit button is pressed");
+    }
+
+    public void pressPickupButton(){
+        clickElement(editButtonPickup, "Edit button is pressed");
+    }
+
+    public void pressEditPayment(){
+        clickElement(editButtonPayment, "Edit button is pressed");
     }
 
     public void selectCountry(String country){
@@ -79,6 +114,14 @@ public class CheckoutPage extends BasePage {
 
     public void enterStreet(String street){
         typeText(address, street, "Street is entered");
+    }
+
+    public void editOwnData(String country, String zip, String city, String street){
+
+        selectCountry(country);
+        enterZipcode(zip);
+        enterCity(city);
+        enterStreet(street);
     }
 
 }

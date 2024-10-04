@@ -1,6 +1,7 @@
 # One of the biggest Hungary's website for selling home technique
 #### This is experimental project and simulation of realistic development environment using GIT as a version control system
 ### [https://ipon.hu/](https://www.internet-prodaja-guma.com/) ###
+#### All recognized problems are reported in the 'Issues' tab of Github ####
 ***
 ***
 ## Preconditions

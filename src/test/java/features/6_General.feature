@@ -115,3 +115,25 @@ Feature: Footer scenarios include checking all footer functions
     Examples:
       | TC_ID  |
       | IP_001 |
+
+  @ipon
+  Scenario Outline: Add new address and verify own information
+
+    Given a user reads test data from "ipon" "login" by id "<TC_ID>"
+    Given the user is on the ipon page
+    And user chooses language
+    And user clicks login button
+    And user enters username and password for login action
+    And user clicks Myprofile button
+    And user clicks Personal Information item
+    And user want to get name personal information item
+    Then user should verify visibility of Personal information item
+    And user adds new address
+    When user add new information for invoice address
+    And user clicks save button
+    Then user should verify user name
+    Then user should verify other data
+
+    Examples:
+      | TC_ID  |
+      | IP_001 |

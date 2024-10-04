@@ -7,6 +7,7 @@ import io.cucumber.java.Before;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 import org.testng.Assert;
 import org.testng.Reporter;
 import pages.*;
@@ -411,8 +412,63 @@ public class BaseSteps extends BaseTest {
         new CheckoutPage(driver).pressOrderButton();
     }
 
-    @Then("user should verify error message for zip code")
-    public void userShouldVerifyErrorMessageForZipCode() {
-        Assert.assertEquals(new CheckoutPage(driver).getZipCodeMessage(),data.get("zipcodeMessage"));
+    @Then("user should verify error message for empty zip code")
+    public void userShouldVerifyErrorMessageForEmptyZipCode() {
+        Assert.assertEquals(new CheckoutPage(driver).getZipCodeMessageBlank(),data.get("zipcodeMessage"));
+    }
+
+    @When("user clicks shopping cart button")
+    public void userClicksShoppingCartButton() {
+        new CheckoutPage(driver).pressShoppingCartButton();
+    }
+
+    @And("user clicks edit button of own data")
+    public void userClicksEditButtonOfOwnData() {
+        new CheckoutPage(driver).pressEditOwnButton();
+    }
+
+    @And("user wants to edit own")
+    public void userWantsToEditOwn() {
+        new CheckoutPage(driver).editOwnData(data.get("country"),data.get("zip"),data.get("city"),data.get("street"));
+    }
+
+    @Then("user should verify error message for bad zip code")
+    public void userShouldVerifyErrorMessageForBadZipCode() {
+        Assert.assertEquals(new CheckoutPage(driver).getZipCodeMessageBad(),data.get("zipcodeMessage"));
+    }
+
+    @Then("user should verify error message for empty city")
+    public void userShouldVerifyErrorMessageForEmptyCity() {
+        Assert.assertEquals(new CheckoutPage(driver).getCityMessage(),data.get("cityMessage"));
+    }
+
+    @Then("user should verify error message for empty street")
+    public void userShouldVerifyErrorMessageForEmptyStreet() {
+        Assert.assertEquals(new CheckoutPage(driver).getStreetMessage(),data.get("streetMessage"));
+    }
+
+    @And("user adds new address")
+    public void userAddsNewAddress() {
+        new GeneralPage(driver).addNewInvoiceAddress();
+    }
+
+    @When("user add new information for invoice address")
+    public void userAddNewInformationForInvoiceAddress() {
+        new GeneralPage(driver).newInvoiceAddress(data.get("name"),data.get("zip"),data.get("city"),data.get("street"),data.get("phone"));
+    }
+
+    @And("user clicks save button")
+    public void userClicksSaveButton() {
+        new GeneralPage(driver).clickSaveButton();
+    }
+
+    @Then("user should verify user name")
+    public void userShouldVerifyUserName() {
+        Assert.assertEquals(new GeneralPage(driver).getInvociceAddressName(), data.get("name"));
+    }
+
+    @Then("user should verify other data")
+    public void userShouldVerifyOtherData() {
+        Assert.assertEquals(new GeneralPage(driver).getInvoiceData(), data.get("otherData"));
     }
 }

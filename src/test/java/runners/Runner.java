@@ -9,8 +9,8 @@ import org.testng.annotations.Test;
 @CucumberOptions(
         features = "src/test/java/features",
         glue = "steps",
-        tags = "@iponx",
-        plugin = {"io.qameta.allure.cucumber6jvm.AllureCucumber6Jvm"}
+        tags = "@ipon",
+        plugin = {"io.qameta.allure.cucumber6jvm.AllureCucumber6Jvm", "rerun:target/failed_scenarios.txt"}
 )
 
 public class Runner extends AbstractTestNGCucumberTests {

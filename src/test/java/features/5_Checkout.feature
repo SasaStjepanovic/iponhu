@@ -1,6 +1,6 @@
-Feature: Order scenarios include valid and invalid order with combination of wrong data
+Feature: Checkout scenarios include own data, pickup and payment option
 
-  @iponx
+  @ipon
   Scenario Outline: Invalid order (empty zip code)
 
     Given a user reads test data from "ipon" "checkout" by id "<TC_ID>"
@@ -16,8 +16,65 @@ Feature: Order scenarios include valid and invalid order with combination of wro
     And user clicks add to cart
     And user clicks continue to checkout
     And user clicks order button
-    Then user should verify error message for zip code
+    Then user should verify error message for empty zip code
 
     Examples:
       | TC_ID  |
       | IP_004 |
+
+  @ipon
+  Scenario Outline: Invalid order (bad zip code)
+
+    Given a user reads test data from "ipon" "checkout" by id "<TC_ID>"
+    Given the user is on the ipon page
+    And user chooses language
+    And user clicks login button
+    And user enters username and password for login action
+    When user clicks shopping cart button
+    And user clicks continue to checkout
+    And user clicks edit button of own data
+    And user wants to edit own
+    And user clicks order button
+    Then user should verify error message for bad zip code
+
+    Examples:
+      | TC_ID  |
+      | IP_001 |
+
+  @ipon
+  Scenario Outline: Invalid order (empty city)
+
+    Given a user reads test data from "ipon" "checkout" by id "<TC_ID>"
+    Given the user is on the ipon page
+    And user chooses language
+    And user clicks login button
+    And user enters username and password for login action
+    When user clicks shopping cart button
+    And user clicks continue to checkout
+    And user clicks edit button of own data
+    And user wants to edit own
+    And user clicks order button
+    Then user should verify error message for empty city
+
+    Examples:
+      | TC_ID  |
+      | IP_001 |
+
+  @ipon
+  Scenario Outline: Invalid order (empty street)
+
+    Given a user reads test data from "ipon" "checkout" by id "<TC_ID>"
+    Given the user is on the ipon page
+    And user chooses language
+    And user clicks login button
+    And user enters username and password for login action
+    When user clicks shopping cart button
+    And user clicks continue to checkout
+    And user clicks edit button of own data
+    And user wants to edit own
+    And user clicks order button
+    Then user should verify error message for empty street
+
+    Examples:
+      | TC_ID  |
+      | IP_001 |
