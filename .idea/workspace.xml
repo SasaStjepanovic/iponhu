@@ -6,15 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="586ca665-c764-4172-a6d2-bfd88930b956" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/features/4_ShoppingCard.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/features/4_ShoppingCard.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/features/5_Checkout.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/features/5_Checkout.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/features/General.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/features/6_General.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pages/CheckoutPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/CheckoutPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pages/GeneralPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/GeneralPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/runners/Runner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/runners/Runner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/steps/BaseSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/steps/BaseSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/test_data/ipon.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/test_data/ipon.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/NotebookPCPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/NotebookPCPage.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,21 +46,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Cucumber Java.Feature: 1_Login.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "TestNG.C:/Users/Lenovo/Desktop/QAprojekti/Automation_projekti/iponhu/xmls/iponTestNGCcumber.xml.executor": "Run",
-    "TestNG.FailedRunner.executor": "Run",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Lenovo/Desktop/QAprojekti/Automation_projekti/iponhu/src/test/java/features",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "preferences.toDoOptions"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Cucumber Java.Feature: 1_Login.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;TestNG.C:/Users/Lenovo/Desktop/QAprojekti/Automation_projekti/iponhu/xmls/iponTestNGCcumber.xml.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.FailedRunner.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Lenovo/Desktop/QAprojekti/Automation_projekti/Vezba_booking&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.toDoOptions&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Lenovo\Desktop\QAprojekti\Automation_projekti\iponhu\src\test\java\features" />

@@ -60,7 +60,7 @@ public class NotebookPCPage extends BasePage {
         return getElementText(verifyCategoryNameNotebook);
     }
 
-    public String getNameNotebookProduct() {
+    public String    getNameNotebookProduct() {
         return getElementText(verifyNotebookProduct);
     }
 
